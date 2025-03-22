@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Visa Requirement Check</h2>
+    
+    <label for="country">Select Country:</label>
+    <select id="country">
+        <option value="">--Select--</option>
+        <option value="USA">USA</option>
+        <option value="Canada">Canada</option>
+        <option value="India">India</option>
+        <option value="UK">UK</option>
+        <option value="Australia">Australia</option>
+    </select>
+    <button onclick="checkVisa()">Check Visa</button>
+    
+    <p id="visaMessage"></p>
+
+    <h2>Visa Application Form</h2>
+    <form id="visaForm" action="server.php" method="post" onsubmit="return validateForm()">
+        <label for="passport">Passport Number:</label>
+        <input type="text" id="passport" name="passport" required>
+        
+        <label for="applyCountry">Select Country:</label>
+        <select id="applyCountry" name="applyCountry">
+            <option value="">--Select--</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+        </select>
+
+        <button type="submit">Apply for Visa</button>
+    </form>
+    
+    <p id="formMessage"></p>
+
+    <script src="1.js"></script>
+</body>
+</html>
